@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ed4e6cc6d23fc84b717f58996c942cf4",
+    "content-hash": "b22477904682ea369ccce73145f3d651",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -17188,6 +17188,32 @@
                 "source": "https://github.com/magento/zf1/tree/1.14.5"
             },
             "time": "2020-12-02T21:12:59+00:00"
+        },
+        {
+            "name": "moip/magento22",
+            "version": "2.0.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://repo.magento.com/archives/moip/magento22/moip-magento22-2.0.1.0.zip",
+                "shasum": "cb4d9ae57d7d83cebd8148a37a9b11e72470a3d2"
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Moip\\Magento2\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "Moip - Exclusive to Brazil"
         },
         {
             "name": "monolog/monolog",
