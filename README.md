@@ -314,11 +314,28 @@ Magento não será a mesma do exemplo acima. Substitua-a respeitando a sua alter
 
 Nesta etapa o ambiente está pronto para ser acessado. Você pode visualizar as URL’s dos serviços na tabela abaixo:
 
-[Serviço Magento (storefront)](https://app.magento-projeto.test/)<br>
-[Magento (painel administrativo)](https://app.magento-projeto.test/admin)<br>
-[RabbitMQ](https://rabbitmq.magento-projeto.test/)<br>
-[ElasticSearch](https://elasticsearch.magento-projeto.test/)<br>
-[Mailhog](https://mailhog.warden.test/)
+<table> 
+  <tr>
+    <td>Serviço Magento (storefront)</td>
+    <td>https://app.magento-projeto.test/</td>
+  </tr>
+  <tr>
+    <td>Magento (painel administrativo)</td>
+    <td>https://app.magento-projeto.test/admin</td>
+  </tr>
+  <tr>
+    <td>RabbitMQ</td>
+    <td>https://rabbitmq.magento-projeto.test/</td>
+  </tr>
+  <tr>
+    <td>ElasticSearch</td>
+    <td>https://elasticsearch.magento-projeto.test/</td>
+  </tr>
+  <tr>
+    <td>Mailhog</td>
+    <td>https://mailhog.warden.test/</td>
+  </tr>
+</table>
 
 ### ● Configurando o acesso de Banco de Dados
 
