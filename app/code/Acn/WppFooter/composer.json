@@ -1,0 +1,16 @@
+{
+    "name": "acn/module-wppfooter",
+    "description": "My description",
+    "type": "magento2-module",
+    "license": "OSL",
+    "version": "1.0.0",
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Acn\\WppFooter\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}
