@@ -16,8 +16,6 @@
         "magento/composer-root-update-plugin": "~1.1",
         "magento/product-community-edition": "2.4.2",
         "moip/magento22": "^2.0",
-        "swissup/absolute-metapackage": "^1.3",
-        "swissup/module-marketplace": "^1.8",
         "wolfsellers/module-enabledisabletfa": "^1.0"
     },
     "autoload": {
@@ -73,16 +71,12 @@
     },
     "minimum-stability": "stable",
     "prefer-stable": true,
-    "repositories": {
-        "0": {
-            "type": "composer",
-            "url": "https://repo.magento.com/"
-        },
-        "magento": {
+    "repositories": [
+        {
             "type": "composer",
             "url": "https://repo.magento.com/"
         }
-    },
+    ],
     "extra": {
         "magento-force": "override"
     }
