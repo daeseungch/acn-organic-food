@@ -1,6 +1,6 @@
 <?php
 
-namespace Acn\Compras\Observer;
+namespace Acn\BasketLimiter\Observer;
 
 use Magento\Framework\Event\Observer;
 use Magento\Framework\Event\ObserverInterface;
@@ -18,24 +18,19 @@ class LimitQtyCart implements ObserverInterface
 
         $typeItem = $quoteItem->getProductType();
 
-        /**
-         * @todo 1. verificar se o quote item (item do carrinho) é do tipo bundle. se não for bundle: retorna. usem o objeto $quoteItem para verificar isso
-         */
+
         if ($typeItem != "bundle") {
                  return;
     }
 
         /** @var \Magento\Catalog\Api\Data\ProductInterface $bundleProduct */
         $bundleProduct = $quoteItem->getProduct();
-        /**
-         * inicializado a variável que vamos usar para validar a quantidade
-         */
+
+
         $addedQuantity = 0;
 
 
-        /**
-         * @todo 2. alterem aqui.. vocês precisam saber o número de itens da cesta para validar isso
-         */
+
         $bundleExpectedQty = (int) $bundleProduct->getData('basket_size');
 
          /**
@@ -46,16 +41,9 @@ class LimitQtyCart implements ObserverInterface
         }
 
 
-         /**
-          * @todo 3. peguem os itens do bundle. usem o objeto $quoteItem para isso
-          */
         $bundleItems = $quoteItem->getChildren();
 
 
-
-        /*
-         * @todo 4. adicionar a quantidade do item filho do bundle adicionada ao carrinho na variável $addedQuantity
-         */
         /** @var \Magento\Quote\Api\Data\CartItemInterface $item */
         foreach ($bundleItems as $item) {
             $addedQuantity = $addedQuantity + $item->getQty();
@@ -66,9 +54,7 @@ class LimitQtyCart implements ObserverInterface
               * comparem os dois valores (qtd adicionada ao carrinho X quantidade esperada)
               */
         if ($addedQuantity > $bundleExpectedQty) {
-            /**
-             * @todo 5. disparem a mensagem da exceção de vocês :)
-             */
+
             throw new LocalizedException(__('The items purchased exceed the size of the basket.'));
         }
     }
